@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val navController = rememberNavController()
-            NavHost(navController = navController, startDestination = "start_screen") { // Bắt đầu từ start_screen
+            NavHost(navController = navController, startDestination = "start_screen") {
                 composable("start_screen") {
                     StartCompose(navController)
                 }
@@ -328,7 +328,7 @@ fun DetailScreen(componentName: String, navController: NavController) {
                     )
 
                     Text(
-                        text = "Tự động cập nhật nội dung nhập vào textfield",
+                        text = "Tự động cập nhật nội dung nhập vào textfield $text",
                         color = Color.Red,
                         modifier = Modifier.padding(top = 8.dp)
                     )
@@ -348,7 +348,7 @@ fun DetailScreen(componentName: String, navController: NavController) {
                     )
 
                     Text(
-                        text = "Tự động cập nhật nội dung nhập vào textfield",
+                        text = "Tự động cập nhật nội dung nhập vào textfield $password",
                         color = Color.Red,
                         modifier = Modifier.padding(top = 8.dp)
                     )
